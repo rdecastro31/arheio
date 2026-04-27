@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import {
   FiGrid,
@@ -9,11 +10,19 @@ import {
   FiLogOut,
   FiX,
   FiServer,
-  FiPaperclip
+  FiPaperclip,
+  FiDatabase,
+  FiFolder,
+  FiTag,
+  FiLayers,
+  FiChevronDown,
+  FiBriefcase
 } from 'react-icons/fi'
 import '../styles/sidebar.css'
 
 export default function Sidebar({ isOpen, onClose }) {
+  const [masterOpen, setMasterOpen] = useState(false)
+
   const handleLogout = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('user')
@@ -24,10 +33,11 @@ export default function Sidebar({ isOpen, onClose }) {
     <aside className={`sidebar ${isOpen ? 'sidebar-open' : ''}`}>
       <div className="sidebar-top">
         <div className="brand-box">
-          <div className="brand-logo">W</div>
+          <div className="brand-logo">D</div>
+
           <div className="brand-text">
-            <h2>WindowsTemplate</h2>
-            <p>Management Portal</p>
+            <h2>DMS Portal</h2>
+            <p>Document Management</p>
           </div>
 
           <button className="sidebar-close-btn" onClick={onClose}>
@@ -44,15 +54,72 @@ export default function Sidebar({ isOpen, onClose }) {
           <span>Dashboard</span>
         </NavLink>
 
-        <NavLink to="/users" className="nav-item" onClick={onClose}>
+        <NavLink to="/transactions" className="nav-item" onClick={onClose}>
           <FiPaperclip />
           <span>Transactions</span>
         </NavLink>
 
-        <NavLink to="/users" className="nav-item" onClick={onClose}>
+        <NavLink to="/workspace" className="nav-item" onClick={onClose}>
           <FiServer />
           <span>Workspace</span>
         </NavLink>
+
+        <NavLink to="/documents" className="nav-item" onClick={onClose}>
+          <FiFileText />
+          <span>Documents</span>
+        </NavLink>
+
+        <div className="nav-group">
+          <button
+            type="button"
+            className={`nav-item nav-parent ${masterOpen ? 'nav-parent-open' : ''}`}
+            onClick={() => setMasterOpen((prev) => !prev)}
+          >
+            <FiDatabase />
+            <span>Master Data</span>
+            <FiChevronDown className="nav-chevron" />
+          </button>
+
+          {masterOpen && (
+            <div className="nav-submenu">
+              <NavLink
+                to="/categories"
+                className="nav-subitem"
+                onClick={onClose}
+              >
+                <FiFolder />
+                <span>Categories</span>
+              </NavLink>
+
+              <NavLink
+                to="/master-data/types"
+                className="nav-subitem"
+                onClick={onClose}
+              >
+                <FiTag />
+                <span>Types</span>
+              </NavLink>
+
+              <NavLink
+                to="/master-data/classifications"
+                className="nav-subitem"
+                onClick={onClose}
+              >
+                <FiLayers />
+                <span>Classification</span>
+              </NavLink>
+
+                <NavLink
+                to="/departments"
+                className="nav-subitem"
+                onClick={onClose}
+              >
+                < FiBriefcase />
+                <span>Departments</span>
+              </NavLink>
+            </div>
+          )}
+        </div>
 
         <NavLink to="/users" className="nav-item" onClick={onClose}>
           <FiUsers />
@@ -62,11 +129,6 @@ export default function Sidebar({ isOpen, onClose }) {
         <NavLink to="/reports" className="nav-item" onClick={onClose}>
           <FiBarChart2 />
           <span>Reports</span>
-        </NavLink>
-
-        <NavLink to="/documents" className="nav-item" onClick={onClose}>
-          <FiFileText />
-          <span>Documents</span>
         </NavLink>
 
         <NavLink to="/security" className="nav-item" onClick={onClose}>

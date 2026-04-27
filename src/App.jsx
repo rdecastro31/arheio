@@ -2,6 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import Dashboard from './pages/Dashboard'
+import Categories from './pages/Categories'
+import Classification from './pages/Classification'
+import Departments from './pages/Departments'
+import Types from './pages/Types'
+import Home from './pages/Home'
 import Login from './pages/Login'
 import Unauthorized from './pages/Unauthorized'
 import Layout from './components/Layout'
@@ -12,12 +17,17 @@ function App() {
       <Routes>
 
         {/* Public Routes */}
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
 
-         <Route element={<Layout />}>
+        <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
-            </Route>
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/classification" element={<Classification />} />
+            <Route path="/departments" element={<Departments />} />
+            <Route path="/types" element={<Types />} />
+          </Route>
       
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>

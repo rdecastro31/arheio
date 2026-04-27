@@ -38,29 +38,30 @@ export default function Login() {
       <div className="login-wrapper">
         <div className="login-brand-panel">
           <div className="brand-overlay"></div>
-          <div className="brand-content">
-            <div className="brand-badge">Secure Access</div>
-            <h1>Welcome Back</h1>
-            <p>
-              Access your platform securely and continue managing your data,
-              workflows, and operations in one place.
-            </p>
+        <div className="brand-content">
+              <div className="brand-badge">ArcheIO Smart Document Control</div>
+              <h1>Welcome Back</h1>
+              <p>
+                Manage, organize, and retrieve your documents with ease. 
+                Leverage OCR technology to digitize files and streamline 
+                your document workflows in one centralized platform.
+              </p>
 
-            <div className="brand-features">
-              <div className="feature-item">
-                <span className="feature-dot"></span>
-                Modern and secure authentication
+              <div className="brand-features">
+                <div className="feature-item">
+                  <span className="feature-dot"></span>
+                  Intelligent OCR for searchable documents
+                </div>
+                <div className="feature-item">
+                  <span className="feature-dot"></span>
+                  Secure and structured document archiving
+                </div>
+                <div className="feature-item">
+                  <span className="feature-dot"></span>
+                  Efficient workflow and approval tracking
+                </div>
               </div>
-              <div className="feature-item">
-                <span className="feature-dot"></span>
-                Clean dashboard experience
-              </div>
-              <div className="feature-item">
-                <span className="feature-dot"></span>
-                Built for productivity and control
-              </div>
-            </div>
-          </div>
+</div>
         </div>
 
         <div className="login-form-panel">

@@ -234,6 +234,52 @@
   background: #c7d2de;
 }
 
+.nav-group {
+  width: 100%;
+}
+
+.nav-parent {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-chevron {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.nav-parent-open .nav-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-submenu {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0 6px;
+  padding-left: 18px;
+  border-left: 1px solid #e5e7eb;
+}
+
+.nav-subitem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  font-size: 0.86rem;
+  color: #64748b;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-subitem:hover,
+.nav-subitem.active {
+  background: #eef2ff;
+  color: #1e293b;
+}
+
 @media (max-width: 991px) {
   .sidebar {
     position: fixed;
