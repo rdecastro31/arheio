@@ -24,7 +24,7 @@ function App() {
         <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/categories" element={<Categories />} />
-            <Route path="/classification" element={<Classification />} />
+            <Route path="/classifications" element={<Classification />} />
             <Route path="/departments" element={<Departments />} />
             <Route path="/types" element={<Types />} />
           </Route>

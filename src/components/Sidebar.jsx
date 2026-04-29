@@ -92,7 +92,7 @@ export default function Sidebar({ isOpen, onClose }) {
               </NavLink>
 
               <NavLink
-                to="/master-data/types"
+                to="/types"
                 className="nav-subitem"
                 onClick={onClose}
               >
@@ -101,7 +101,7 @@ export default function Sidebar({ isOpen, onClose }) {
               </NavLink>
 
               <NavLink
-                to="/master-data/classifications"
+                to="/classifications"
                 className="nav-subitem"
                 onClick={onClose}
               >
