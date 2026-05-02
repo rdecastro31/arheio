@@ -89,6 +89,7 @@ export default function Categories() {
       fd.append("tag", "getall")
 
       const response = await axios.post(`${API_URL}/category.php`, fd)
+      console.log(response.data)  
 
       if (Number(response.data.success) === 1) {
         setCategories(response.data.data || [])
