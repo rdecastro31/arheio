@@ -352,11 +352,10 @@ export default function Categories() {
                     <td>{category.description || "-"}</td>
                     <td>
                       <span
-                        className={`status-badge ${
-                          category.status === "Active"
-                            ? "status-active"
-                            : "status-inactive"
-                        }`}
+                        className={`status-badge ${category.status === "Active"
+                          ? "status-active"
+                          : "status-inactive"
+                          }`}
                       >
                         {category.status || "Inactive"}
                       </span>

@@ -1,0 +1,47 @@
+.viewer-modal {
+  background: white;
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  animation: modalIn 0.3s ease-out;
+}
+
+.viewer-body {
+  flex: 1;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.unsupported-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 15px;
+  color: #64748b;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -63,6 +63,11 @@ export default function Sidebar({ isOpen, onClose }) {
           <FiServer />
           <span>Workspace</span>
         </NavLink>
+        
+        <NavLink to="/storage" className="nav-item" onClick={onClose}>
+          <FiFolder />
+          <span>Storage</span>
+        </NavLink>
 
         <NavLink to="/documents" className="nav-item" onClick={onClose}>
           <FiFileText />
@@ -109,7 +114,7 @@ export default function Sidebar({ isOpen, onClose }) {
                 <span>Classification</span>
               </NavLink>
 
-                <NavLink
+              <NavLink
                 to="/departments"
                 className="nav-subitem"
                 onClick={onClose}

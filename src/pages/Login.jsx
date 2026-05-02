@@ -38,30 +38,30 @@ export default function Login() {
       <div className="login-wrapper">
         <div className="login-brand-panel">
           <div className="brand-overlay"></div>
-        <div className="brand-content">
-              <div className="brand-badge">ArcheIO Smart Document Control</div>
-              <h1>Welcome Back</h1>
-              <p>
-                Manage, organize, and retrieve your documents with ease. 
-                Leverage OCR technology to digitize files and streamline 
-                your document workflows in one centralized platform.
-              </p>
+          <div className="brand-content">
+            <div className="brand-badge">ArcheIO Smart Document Control</div>
+            <h1>Welcome Back</h1>
+            <p>
+              Manage, organize, and retrieve your documents with ease.
+              Leverage OCR technology to digitize files and streamline
+              your document workflows in one centralized platform.
+            </p>
 
-              <div className="brand-features">
-                <div className="feature-item">
-                  <span className="feature-dot"></span>
-                  Intelligent OCR for searchable documents
-                </div>
-                <div className="feature-item">
-                  <span className="feature-dot"></span>
-                  Secure and structured document archiving
-                </div>
-                <div className="feature-item">
-                  <span className="feature-dot"></span>
-                  Efficient workflow and approval tracking
-                </div>
+            <div className="brand-features">
+              <div className="feature-item">
+                <span className="feature-dot"></span>
+                Intelligent OCR for searchable documents
               </div>
-</div>
+              <div className="feature-item">
+                <span className="feature-dot"></span>
+                Secure and structured document archiving
+              </div>
+              <div className="feature-item">
+                <span className="feature-dot"></span>
+                Efficient workflow and approval tracking
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="login-form-panel">

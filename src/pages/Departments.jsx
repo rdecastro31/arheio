@@ -352,11 +352,10 @@ export default function Departments() {
                     <td>{department.description || "-"}</td>
                     <td>
                       <span
-                        className={`status-badge ${
-                          department.status === "Active"
+                        className={`status-badge ${department.status === "Active"
                             ? "status-active"
                             : "status-inactive"
-                        }`}
+                          }`}
                       >
                         {department.status || "Inactive"}
                       </span>
