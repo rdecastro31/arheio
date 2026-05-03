@@ -15,15 +15,16 @@
   margin: 0;
   font-size: 1.55rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #2f2f2f;
 }
 
 .page-subtitle {
   margin: 5px 0 0;
   font-size: 0.92rem;
-  color: #6b7280;
+  color: #656565;
 }
 
+/* BUTTONS */
 .primary-btn,
 .secondary-btn,
 .btn-primary,
@@ -41,31 +42,35 @@
 }
 
 .primary-btn,
-.btn-primary {
-  border: 1px solid #4f46e5;
-  background: #4f46e5;
-  color: #ffffff;
+.btn-primary,
+button.primary-btn {
+  border: 1px solid #820d0d !important;
+  background: #820d0d !important;
+  color: #fcfcfc !important;
 }
 
 .primary-btn:hover,
-.btn-primary:hover {
-  background: #4338ca;
-  border-color: #4338ca;
+.btn-primary:hover,
+button.primary-btn:hover {
+  background: #650909 !important;
+  border-color: #650909 !important;
   transform: translateY(-1px);
 }
 
 .secondary-btn,
-.btn-secondary {
-  border: 1px solid #e5e7eb;
-  background: #f9fafb;
-  color: #374151;
+.btn-secondary,
+button.secondary-btn {
+  border: 1px solid #d4d0c7 !important;
+  background: #fcfcfc !important;
+  color: #656565 !important;
 }
 
 .secondary-btn:hover,
-.btn-secondary:hover {
-  background: #f3f4f6;
-  border-color: #d1d5db;
-  color: #111827;
+.btn-secondary:hover,
+button.secondary-btn:hover {
+  background: #e0ddd5 !important;
+  border-color: #c7c2b8 !important;
+  color: #2f2f2f !important;
   transform: translateY(-1px);
 }
 
@@ -76,11 +81,12 @@
   transform: scale(0.97);
 }
 
+/* TABLE CARD */
 .table-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: #fcfcfc;
+  border: 1px solid rgba(137, 133, 128, 0.22);
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 24px rgba(101, 101, 101, 0.07);
   overflow: hidden;
 }
 
@@ -90,7 +96,8 @@
   align-items: center;
   gap: 12px;
   padding: 16px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid rgba(137, 133, 128, 0.2);
+  background: rgba(224, 221, 213, 0.18);
   flex-wrap: wrap;
 }
 
@@ -99,14 +106,20 @@
   align-items: center;
   gap: 10px;
   width: min(380px, 100%);
-  background: #f9fafb;
-  border: 1px solid #d1d5db;
+  background: #fcfcfc;
+  border: 1px solid rgba(137, 133, 128, 0.28);
   border-radius: 12px;
   padding: 10px 12px;
+  transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: rgba(130, 13, 13, 0.45);
+  box-shadow: 0 0 0 4px rgba(130, 13, 13, 0.08);
 }
 
 .search-box svg {
-  color: #6b7280;
+  color: #898580;
 }
 
 .search-box input {
@@ -115,14 +128,15 @@
   outline: 0;
   background: transparent;
   font-size: 0.9rem;
-  color: #111827;
+  color: #2f2f2f;
 }
 
 .record-count {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #656565;
 }
 
+/* TABLE */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
@@ -134,56 +148,57 @@
 }
 
 .data-table th {
-  background: #f9fafb;
-  color: #374151;
+  background: #e0ddd5;
+  color: #2f2f2f;
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: 13px 16px;
   text-align: left;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid rgba(137, 133, 128, 0.28);
   white-space: nowrap;
 }
 
 .data-table td {
   padding: 14px 16px;
   font-size: 0.9rem;
-  color: #374151;
-  border-bottom: 1px solid #f1f5f9;
+  color: #656565;
+  border-bottom: 1px solid rgba(137, 133, 128, 0.14);
   vertical-align: middle;
 }
 
 .data-table tr:hover {
-  background: #f8fafc;
+  background: rgba(224, 221, 213, 0.25);
 }
 
 .fw-semibold {
   font-weight: 600;
-  color: #111827;
+  color: #2f2f2f;
 }
 
 .text-end {
   text-align: right !important;
 }
 
+/* BADGES */
 .status-badge {
   display: inline-flex;
   align-items: center;
   padding: 5px 10px;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 999px;
 }
 
 .status-active {
-  background: #dcfce7;
-  color: #166534;
+  background: rgba(130, 13, 13, 0.08);
+  color: #820d0d;
 }
 
 .status-inactive {
-  background: #fee2e2;
-  color: #991b1b;
+  background: rgba(137, 133, 128, 0.18);
+  color: #656565;
 }
 
 .short-name-badge {
@@ -192,12 +207,13 @@
   justify-content: center;
   padding: 5px 10px;
   border-radius: 999px;
-  background: #eef2ff;
-  color: #4f46e5;
+  background: rgba(137, 133, 128, 0.14);
+  color: #2f2f2f;
   font-size: 0.78rem;
   font-weight: 700;
 }
 
+/* ACTIONS */
 .action-buttons {
   display: flex;
   justify-content: flex-end;
@@ -207,9 +223,10 @@
 .icon-btn {
   width: 34px;
   height: 34px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid rgba(137, 133, 128, 0.24);
   border-radius: 10px;
-  background: #ffffff;
+  background: #fcfcfc;
+  color: #656565;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -218,39 +235,38 @@
 }
 
 .edit-btn {
-  color: #2563eb;
+  color: #656565;
 }
 
 .edit-btn:hover {
-  background: #eff6ff;
-  border-color: #bfdbfe;
+  background: #e0ddd5;
+  border-color: #898580;
+  color: #2f2f2f;
 }
 
 .delete-btn {
-  color: #dc2626;
+  color: #d40000;
 }
 
 .delete-btn:hover {
-  background: #fef2f2;
-  border-color: #fecaca;
+  background: rgba(212, 0, 0, 0.08);
+  border-color: rgba(212, 0, 0, 0.28);
+  color: #d40000;
 }
 
 .empty-state {
   text-align: center;
   padding: 28px 16px !important;
-  color: #6b7280 !important;
+  color: #898580 !important;
 }
 
-/* =========================
-   MODAL
-========================= */
-
+/* MODAL */
 .modal-overlay,
 .modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(15, 23, 42, 0.18);
+  background: rgba(47, 47, 47, 0.28);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,10 +275,10 @@
 
 .category-modal {
   width: min(520px, 100%);
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: #fcfcfc;
+  border: 1px solid rgba(137, 133, 128, 0.24);
   border-radius: 18px;
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 24px 60px rgba(47, 47, 47, 0.2);
   overflow: hidden;
   animation: modalFadeIn 0.2s ease;
 }
@@ -277,25 +293,25 @@
   align-items: center;
   gap: 12px;
   padding: 20px 22px;
-  border-bottom: 1px solid #e5e7eb;
-  background: #f9fafb;
+  border-bottom: 1px solid rgba(137, 133, 128, 0.22);
+  background: #e0ddd5;
 }
 
 .modal-header h2 {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #111827;
+  color: #2f2f2f;
 }
 
 .modal-close,
 .modal-close-btn {
   width: 34px;
   height: 34px;
-  border: none;
+  border: 1px solid rgba(137, 133, 128, 0.25);
   border-radius: 10px;
-  background: #eef2f7;
-  color: #374151;
+  background: #fcfcfc;
+  color: #656565;
   font-size: 1.35rem;
   display: flex;
   align-items: center;
@@ -306,8 +322,9 @@
 
 .modal-close:hover,
 .modal-close-btn:hover {
-  background: #e5e7eb;
-  color: #111827;
+  background: rgba(212, 0, 0, 0.08);
+  border-color: rgba(212, 0, 0, 0.22);
+  color: #d40000;
 }
 
 .category-form,
@@ -330,20 +347,20 @@
   margin-bottom: 7px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #374151;
+  color: #656565;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
   width: 100%;
-  border: 1px solid #d1d5db;
+  border: 1px solid rgba(137, 133, 128, 0.35);
   border-radius: 12px;
   outline: none;
   padding: 11px 13px;
   font-size: 0.92rem;
-  color: #111827;
-  background: #ffffff;
+  color: #2f2f2f;
+  background: #fcfcfc;
   transition: 0.2s ease;
 }
 
@@ -355,8 +372,8 @@
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: #64748b;
-  box-shadow: 0 0 0 4px rgba(100, 116, 139, 0.12);
+  border-color: rgba(130, 13, 13, 0.5);
+  box-shadow: 0 0 0 4px rgba(130, 13, 13, 0.08);
 }
 
 .modal-actions {
@@ -369,24 +386,6 @@
 
 .modal-actions button {
   min-width: 95px;
-}
-
-button.primary-btn {
-  background: #4f46e5 !important;
-  color: #ffffff !important;
-  border: 1px solid #4f46e5 !important;
-  border-radius: 10px !important;
-  padding: 8px 16px !important;
-  font-size: 0.85rem !important;
-  font-weight: 600 !important;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-button.primary-btn:hover {
-  background: #4338ca !important;
-  border-color: #4338ca !important;
-  transform: translateY(-1px);
 }
 
 @keyframes modalFadeIn {

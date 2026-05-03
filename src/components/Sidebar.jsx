@@ -106,7 +106,7 @@ export default function Sidebar({ isOpen, onClose }) {
               </NavLink>
 
               <NavLink
-                to="/classifications"
+                to="/classification"
                 className="nav-subitem"
                 onClick={onClose}
               >
