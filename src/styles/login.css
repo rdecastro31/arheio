@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f8fafc;
+  background: #fcfcfc;
 }
 
 .login-page {
@@ -15,9 +15,9 @@ body {
   justify-content: center;
   padding: 32px;
   background:
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.06), transparent 25%),
-    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.05), transparent 25%),
-    #f8fafc;
+    radial-gradient(circle at top left, rgba(130, 13, 13, 0.07), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(137, 133, 128, 0.16), transparent 28%),
+    linear-gradient(180deg, #fcfcfc 0%, #e0ddd5 100%);
 }
 
 .login-wrapper {
@@ -26,11 +26,11 @@ body {
   min-height: 620px;
   display: grid;
   grid-template-columns: 1fr 460px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: #fcfcfc;
+  border: 1px solid rgba(137, 133, 128, 0.24);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 24px 70px rgba(101, 101, 101, 0.16);
 }
 
 .login-brand-panel {
@@ -38,7 +38,10 @@ body {
   padding: 64px;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+  background:
+    radial-gradient(circle at 18% 18%, rgba(130, 13, 13, 0.09), transparent 34%),
+    linear-gradient(135deg, #fcfcfc 0%, #e0ddd5 100%);
+  border-right: 1px solid rgba(137, 133, 128, 0.2);
 }
 
 .brand-overlay {
@@ -55,10 +58,10 @@ body {
   padding: 8px 14px;
   margin-bottom: 22px;
   border-radius: 999px;
-  background: #dbeafe;
-  color: #1d4ed8;
+  background: rgba(130, 13, 13, 0.08);
+  color: #820d0d;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.3px;
 }
 
@@ -67,14 +70,14 @@ body {
   font-size: 44px;
   line-height: 1.1;
   font-weight: 700;
-  color: #0f172a;
+  color: #2f2f2f;
 }
 
 .brand-content p {
   margin: 0;
   font-size: 16px;
   line-height: 1.8;
-  color: #475569;
+  color: #656565;
 }
 
 .brand-features {
@@ -87,7 +90,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #334155;
+  color: #656565;
   font-size: 14px;
   font-weight: 500;
 }
@@ -96,7 +99,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #2563eb;
+  background: #898580;
   flex-shrink: 0;
 }
 
@@ -105,7 +108,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 48px;
-  background: #ffffff;
+  background: #fcfcfc;
 }
 
 .login-form-box {
@@ -121,13 +124,13 @@ body {
   margin: 0 0 8px;
   font-size: 30px;
   font-weight: 700;
-  color: #0f172a;
+  color: #2f2f2f;
 }
 
 .login-header p {
   margin: 0;
   font-size: 14px;
-  color: #64748b;
+  color: #656565;
   line-height: 1.6;
 }
 
@@ -146,7 +149,7 @@ body {
 .input-group label {
   font-size: 13px;
   font-weight: 600;
-  color: #334155;
+  color: #656565;
 }
 
 .input-wrapper {
@@ -159,29 +162,29 @@ body {
   position: absolute;
   left: 14px;
   font-size: 18px;
-  color: #94a3b8;
+  color: #898580;
 }
 
 .input-wrapper input {
   width: 100%;
   height: 52px;
-  border: 1px solid #dbe2ea;
+  border: 1px solid rgba(137, 133, 128, 0.35);
   border-radius: 14px;
   padding: 0 44px 0 44px;
   font-size: 14px;
-  color: #0f172a;
-  background: #ffffff;
+  color: #2f2f2f;
+  background: #fcfcfc;
   outline: none;
   transition: all 0.2s ease;
 }
 
 .input-wrapper input::placeholder {
-  color: #94a3b8;
+  color: #898580;
 }
 
 .input-wrapper input:focus {
-  border-color: #93c5fd;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+  border-color: rgba(130, 13, 13, 0.48);
+  box-shadow: 0 0 0 4px rgba(130, 13, 13, 0.08);
 }
 
 .password-toggle {
@@ -189,13 +192,17 @@ body {
   right: 14px;
   border: none;
   background: transparent;
-  color: #94a3b8;
+  color: #898580;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   font-size: 18px;
+}
+
+.password-toggle:hover {
+  color: #656565;
 }
 
 .login-options {
@@ -210,43 +217,50 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: #475569;
+  color: #656565;
   cursor: pointer;
 }
 
 .remember-me input {
-  accent-color: #2563eb;
+  accent-color: #820d0d;
 }
 
 .forgot-btn {
   border: none;
   background: none;
-  color: #2563eb;
+  color: #820d0d;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   padding: 0;
+}
+
+.forgot-btn:hover {
+  color: #650909;
+  text-decoration: underline;
 }
 
 .login-btn {
   height: 52px;
   margin-top: 6px;
-  border: none;
+  border: 1px solid #820d0d;
   border-radius: 14px;
-  background: #2563eb;
-  color: #ffffff;
+  background: #820d0d;
+  color: #fcfcfc;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   transition: all 0.2s ease;
+  box-shadow: 0 14px 28px rgba(130, 13, 13, 0.18);
 }
 
 .login-btn:hover {
-  background: #1d4ed8;
+  background: #650909;
+  border-color: #650909;
   transform: translateY(-1px);
 }
 
@@ -258,7 +272,7 @@ body {
 .login-footer p {
   margin: 0;
   font-size: 12px;
-  color: #94a3b8;
+  color: #898580;
   line-height: 1.5;
 }
 
